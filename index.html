@@ -25,6 +25,16 @@
       }
 
       /* SOCIAL STYLES */
+      .social-list {
+        list-style: none; /* this removes the bullet points */
+        padding: 0; /* this moves the content all the way to the side */
+        text-align: center; /* this then centres the links within the parent element */
+      }
+
+      .social-list > li {
+        display: inline-block; /* this makes every list element that is in the social-list element, into an inline-block element. */
+      }
+
       .social-link {
         background: rgba(150,150,150,0.5);
         color: blue;
@@ -37,6 +47,16 @@
 
       .bio-wrapper {
         font-size: 24px;
+        /* overflow: hidden; */
+      }
+
+      .bio-wrapper:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
       }
 
       .bio-box {
@@ -88,9 +108,9 @@
       I'm a percent test
     </div> -->
 
-    <div class = "full-hero hero-home">
+    <div class="full-hero hero-home">
       <h1>I'm an h1</h1>
-        <ul>
+        <ul class="social-list">
           <!-- <li><a href="https://example.com/" style="color: red;">Link</a></li>
           <li><a href="https://example.com/" style="color: red;">Link</a></li>
           <li><a href="https://example.com/" style="color: red;">Link</a></li> -->
@@ -144,7 +164,7 @@
         </div>
       </div>
   
-      <p style="clear:left;">
+      <p>
         Learn Enough to Be Dangerous is a leader in the movement to teach the world <em>technical sophistication</em>, which includes both "hard skills" like coding, command lines, and version control, and "soft skills" like guessing keyboard shortcuts, Googling error messages, and knowing when to just reboot the darn thing.
       </p>
 
