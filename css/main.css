@@ -153,3 +153,21 @@ a {
   text-decoration: none; <-- this removes the underline from links -->
   text-transform: uppercase;
 }
+
+  /* Changing the color of the nav links */
+.header-nav a:hover,
+.header-nav a:active {
+  color: #ed6e2f;
+}
+.header-logo:hover,
+.header-logo:active {
+  opacity: 0.5;
+}
+
+  /* Changing the color of the Home first link, since it's so important */
+.header-nav > li:first-child a {
+  color: #ed6e2f;
+}
+.header-nav > li:first-child a:hover {
+  color: #000;
+}
