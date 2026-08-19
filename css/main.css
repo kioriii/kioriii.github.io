@@ -138,6 +138,11 @@ a {
 
 /* HEADER STYLES */
 
+.header {
+  background-color: #000;
+  color:#fff;
+}
+
 .header-nav {
   float: right;
   padding: 5.5vh 60px 0 0;
@@ -149,12 +154,12 @@ a {
 /* This part adds a divider line using  a sibling selector */
 /* Applies all rules to all li elements next to the initial li inside an element with class .header-nav. This means that the divider lines appear before every menu item except the first. */
 .header-nav > li ~ li {
-  border-left: 1px solid rgba(0,0,0,0.3);
+  border-left: 1px solid rgba(255,255,255,0.3);
   padding-left: 1em;
 }
 
 .header-nav a {
-  color: #000;
+  color: #fff;
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none; <-- this removes the underline from links -->
@@ -168,7 +173,7 @@ a {
 }
 .header-logo:hover,
 .header-logo:active {
-  opacity: 0.5;
+  background-color: #ed6e2f;
 }
 
   /* Changing the color of the Home first link, since it's so important */
@@ -176,7 +181,29 @@ a {
   color: #ed6e2f;
 }
 .header-nav > li:first-child a:hover {
-  color: #000;
+  color: #fff;
+}
+/* Adding an initial position:absolute to the logo */
+.header-logo {
+  background-color: #000;
+  box-sizing: border-box;
+  display: block;
+  height: 10vh;
+  padding-top: 10px;
+  /* height: 110px;
+  width: 110px; */
+  position: relative;
+  /* margin: -55px 0 0 -55px;  */
+    /* This is the old way of centering an object. It can only work on fixed width objects. */
+  text-align: center;
+  width: 10vh;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+    /* This is the new way of centering an object and can work on dynamically sized objects as well */
+}
+.header-logo img{
+  width: 4.3vh;
 }
 
 /* Adding an adjacent sibling selector to target a paragraph immediately following h2 */
@@ -187,3 +214,4 @@ h2 ~ p {
   max-width: 70%;
   text-align: center ;
 }
+
