@@ -68,7 +68,14 @@ a {
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 10vh;
+}
+.hero-home {
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
 }
 
 /* SOCIAL STYLES */
@@ -92,7 +99,6 @@ a {
 .social-list {
   list-style: none;
   padding: 0;
-
   text-align: center;
 }
 .social-list > li {
