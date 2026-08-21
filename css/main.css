@@ -140,6 +140,19 @@ a {
   color: green;
 }
 
+/* NAV-LINK STYLES */
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none; <-- this removes the underline from links -->
+  text-transform: uppercase;
+}
+
+  /* Changing the color of the nav links */
+.nav-links a:hover,
+.nav-links a:active {
+  color: #ed6e2f;
+}
 
 /* HEADER STYLES */
 
@@ -168,17 +181,8 @@ a {
 
 .header-nav a {
   color: #fff;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-decoration: none; <-- this removes the underline from links -->
-  text-transform: uppercase;
 }
 
-  /* Changing the color of the nav links */
-.header-nav a:hover,
-.header-nav a:active {
-  color: #ed6e2f;
-}
 .header-logo:hover,
 .header-logo:active {
   background-color: #ed6e2f;
@@ -243,4 +247,13 @@ h2 ~ p {
 
 .footer h3 span {
   color:#aaa;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin: 2em 1em 0;
+}
+
+.footer-nav a {
+  color: #ccc;
 }
