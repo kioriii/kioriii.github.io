@@ -30,11 +30,12 @@ body {
   line-height: 1;
 }
 
-  .content-container {
-    flex-grow: 1;
-    padding-top: 10vh;
-    width: 100%;
-  }
+.content-container {
+  display: flex;
+  flex: 1 1 auto;
+  padding-top: 10vh;
+  width: 100%;
+}
 
 blockquote, q {
   quotes: none;
@@ -365,4 +366,35 @@ h2 ~ p {
 
 .footer-nav a {
   color: #ccc;
+}
+
+/* COLUMN STYLES */
+.col-three {
+  display: flex;
+  flex: 1;
+}
+
+.col {
+  box-sizing:border-box;
+  padding: 2em;
+}
+
+/* This adds a grey line on the left as a divider */
+/* Select all col that follow a col */
+.col-three .col ~ .col {
+  border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Nav bar will not grow, but can shrink, minimum of 15em width */
+.col-three .col-nav {
+  flex: 0 1 15em;
+}
+
+/* content flex item is set to 1 1 0 - can grow, can shrink, min width 0 ie can shrink as much as possible */
+.col-three .col-content {
+  flex: 1;
+}
+
+.col-three .col-aside {
+  flex: 0 1 20em;
 }
