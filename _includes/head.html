@@ -1,5 +1,12 @@
   <head>
-    <title>Test Page: Don’t Panic</title>
+    
+    <!-- This part changes the page title depending on whether it is a blog post or not. Custom title -->
+    {% if page.title %}
+      <title> {{ <page.title }} | Test Page </title>
+    {% else %}
+        <title>Test Page: Don't Panic</title>
+    {% endif %}
+
     <link href="/favicon.png" rel="icon">
     <meta charset="utf-8">
 
