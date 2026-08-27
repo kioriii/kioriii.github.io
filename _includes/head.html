@@ -7,6 +7,13 @@
         <title>Test Page: Don't Panic</title>
     {% endif %}
 
+    <!-- This part adds a description to the website if it is present -->
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+      {% else%}
+        <meta name="description" content="This is a dangerous site.">
+    {% endif %}
+
     <link href="/favicon.png" rel="icon">
     <meta charset="utf-8">
 
