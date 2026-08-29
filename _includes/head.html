@@ -1,0 +1,27 @@
+  <head>
+    
+    <!-- This part changes the page title depending on whether it is a blog post or not. Custom title -->
+    {% if page.title %}
+      <title> {{ <page.title }} | Test Page </title>
+    {% else %}
+        <title>Test Page: Don't Panic</title>
+    {% endif %}
+
+    <!-- This part adds a description to the website if it is present -->
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+      {% else%}
+        <meta name="description" content="This is a dangerous site.">
+    {% endif %}
+
+    <link href="/favicon.png" rel="icon">
+    <meta charset="utf-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/fonts/fontawesome-free-7.3.1-web/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/main.css">
+  </head>

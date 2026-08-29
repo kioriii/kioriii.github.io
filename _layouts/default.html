@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %} <!-- this is the Jekyll Liquid tag to include the Head include-->
+
+  <body>
+    
+    {% include header.html %}
+    
+    <!-- Making flexbox to push the footer to the bottom of every page of the site -->
+    <div class="content-container">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
