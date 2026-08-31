@@ -9,9 +9,11 @@
         /* grid-template-columns: 5em repeat(3,2fr) repeat(2,1fr) 900px; */
         /* grid-template-columns: repeat(3,1fr); */
         /* grid-template-rows: 15em; */
-        grid-auto-rows: auto;
+        /* grid-auto-rows: auto; */
+        grid-auto-rows: minmax(10em,1fr);
         gap: 1em; 
           /* This used to be grid-gap */
+          /* This is actually shorthand for gap: 1em 1em; which is a 1em row gap and 1em column gap */
       }
       .grid > div {
         border: 1px solid #000;
