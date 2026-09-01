@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      /* Removing margin and padding so that the elements on the grid can fill the screen */
+      html, body {
+        border: 0;
+        margin: 0;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-areas: "header header header" "menu content panel" "footer footer footer";
+        grid-template-columns: 10em 1fr 15em;
+        grid-template-rows: minmax(4em, auto) 1fr auto;
+        min-height: 100vh;
+      }
+      .grid-container > div {
+        box-sizing: border-box;
+        position: relative;
+      }
+      .grid-header {
+        background-color: #ccc;
+        grid-area: header;
+      }
+      .grid-menu  {
+        background-color: #c0c0c0;
+        grid-area: menu;
+      }
+      .grid-content {
+        grid-area: content;
+      }
+      .grid-panel {
+        background-color: #eee;
+        gird-area: panel;
+      }
+      .grid-footer {
+        background-color: #ddd;
+        gird-area: footer;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        grid-auto-rows: minmax(10em, 1fr);
+        grid: 1em;
+      }
+      .grid > div {
+        border: 1px solid #000;
+      }
+      .grid-feature {
+        grid-column: span 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <header class="grid-header">
+        I am a Header
+      </header>
+      <nav class="grid-menu">
+        I am a Menu
+      </nav>
+      <article class="grid-content">
+        I am Content
+      </article>
+      <aside class="grid-panel">
+        I am Info
+      </aside>
+      <footer class="grid-footer">
+        I am a Footer
+      </footer>
+    </div>
+
+  </body>
+</html>
